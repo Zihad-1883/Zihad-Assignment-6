@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Check from '../assets/Check.png'
 
 const Product = ({ item , buyNow , setBuyNow }) => {
@@ -36,7 +36,7 @@ const Product = ({ item , buyNow , setBuyNow }) => {
                             </div>
                         </div>
                         <button onClick={() => handleBuyNow()}
-                                className="btn bg-linear-to-r from-[#4f39f6] to-[#9514fa] font-semibold text-white px-4 py-7 rounded-full w-full">{buyNow.length !== 0 ? "Buy Now" : "no"}</button>
+                                className="btn bg-linear-to-r from-[#4f39f6] to-[#9514fa] font-semibold text-white px-4 py-7 rounded-full w-full">{buyNow.length === 0 ? "Buy Now" : "no"}</button>
                     </div>
         </div>
     );

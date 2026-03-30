@@ -4,6 +4,7 @@ import Banner from './Components/Banner'
 import Navbar from './Components/Navbar'
 import Stats from './Components/Stats'
 import Tools from './Components/Tools'
+import GetStarted from './Components/GetStarted'
 
 const getProducts = async() => {
     const res = await fetch('/products.json');
@@ -26,6 +27,7 @@ function App() {
        <Suspense fallback={<p>Loading</p>}>
           <Tools productsPromise={productsPromise} buyNow={buyNow} setBuyNow={setBuyNow}></Tools>
        </Suspense>
+       <GetStarted></GetStarted>
     </>
   )
 }
