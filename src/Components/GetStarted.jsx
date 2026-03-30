@@ -10,7 +10,7 @@ const GetStarted = () => {
                 <h2 className="text-5xl font-bold mb-4">Get Started in 3 Steps</h2>
                 <p className="text-[#627382]">Start using premium digital tools in minutes, not hours.</p>
             </div>
-            <div className="container mx-auto grid grid-cols-3 gap-8">
+            <div className="container mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div className="bg-white rounded-2xl shadow-sm p-8">
                     <div className="text-right">
                         <span className="text-right text-white p-2 bg-linear-to-r from-[#4f39f6] to-[#9514fa] rounded-full">01</span>

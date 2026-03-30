@@ -5,6 +5,7 @@ import Navbar from './Components/Navbar'
 import Stats from './Components/Stats'
 import Tools from './Components/Tools'
 import GetStarted from './Components/GetStarted'
+import Pricing from './Components/Pricing'
 
 const getProducts = async() => {
     const res = await fetch('/products.json');
@@ -28,6 +29,7 @@ function App() {
           <Tools productsPromise={productsPromise} buyNow={buyNow} setBuyNow={setBuyNow}></Tools>
        </Suspense>
        <GetStarted></GetStarted>
+       <Pricing></Pricing>
     </>
   )
 }
