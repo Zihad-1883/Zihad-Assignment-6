@@ -1,16 +1,53 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# DigiTools Platform
 
-Currently, two official plugins are available:
+**A modern digital marketplace to discover, compare, and purchase premium productivity tools — all in one place.**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+[![Live Demo](https://img.shields.io/badge/🌐_Live_Demo-Visit_Site-6d28d9?style=for-the-badge)](https://digitools-assignment-6.netlify.app/)
 
-## React Compiler
+</div>
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 📖 About
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+DigiTools Platform is a clean, responsive digital products store built with React. Users can browse a fine collection of premium tools — from AI writing assistants to automation suites — add them into a cart, and manage purchases. The project focuses on component-based architecture, dynamic state management, and a polished UI experience.
+
+---
+
+## ⚙️ Tech Stack
+
+
+## | ⚛️ React Version 19 | UI & Component Architecture |
+## | ⚡ Vite Version 5 | Build Tool & Dev Server | Easier To Manage With Tailwind
+## | 🎨 Tailwind CSS Version 4 | Utility-First Styling |
+## | 🌼 DaisyUI Version 5 | UI Component Library |
+## | ☁️ Netlify For Deployment & Hosting |
+
+---
+
+## ✨ Features
+
+### 🛒 Smart Shopping Cart
+Add products to your cart with a single click. Each product card tracks its own state — once added, the button updates individually so you always know what's in your cart. Remove items anytime with live total price calculation.
+
+### 🏷️ Product Badges & Filtering
+Every product comes tagged as **Best Seller**, **Popular**, or **New** with color-coded badges. The UI makes it easy to spot trending tools at a glance, helping users make faster, smarter purchase decisions.
+
+### 📦 Dynamic Data Rendering
+All product data is loaded from a local JSON file, making the platform easy to scale. New products can be added by simply updating the JSON — no component changes needed.
+
+---
+
+
+## 🌐 Live Demo
+
+[https://digitools-assignment-6.netlify.app/](https://digitools-assignment-6.netlify.app/)
+
+---
+---
+
+
+# Made  by [Zihad](https://github.com/Zihad-1883)
+
+
