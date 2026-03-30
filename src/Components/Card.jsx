@@ -1,10 +1,12 @@
 import React from 'react';
 import Check from '../assets/Check.png'
+import { toast } from 'react-toastify';
 
 const Card = ({item , buyNow , setBuyNow}) => {
 
      const handleBuyNow = () => {
         setBuyNow([...buyNow , item]);
+        toast.success('Subscribed')
     }
     const isClicked = buyNow.some(e => e.id === item.id)
     console.log(isClicked);

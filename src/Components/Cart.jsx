@@ -1,16 +1,18 @@
 import React from 'react';
+import { toast } from 'react-toastify';
 
 const Cart = ({buyNow , setBuyNow}) => {
-    // console.log(buyNow);
-    const totalPrice = buyNow.reduce((sum , item) => sum + item.price , 0)
-    // console.log(totalPrice)
-    // console.log(buyNow)
-    const removeCart = (item) => {
-        // console.log(item)
-        const filteredArray = buyNow.filter(e => e.id !== item.id);
-        // console.log(filteredArray)
-        setBuyNow(filteredArray);
 
+    const totalPrice = buyNow.reduce((sum , item) => sum + item.price , 0)
+    const removeCart = (item) => {
+        const filteredArray = buyNow.filter(e => e.id !== item.id);
+        setBuyNow(filteredArray);
+        toast('Item Has Been Removed From Cart')
+    }
+
+    const handlingProceed = () => {
+        setBuyNow([]);
+        toast.success('Checkout Done')
     }
 
     return (
@@ -46,7 +48,7 @@ const Cart = ({buyNow , setBuyNow}) => {
                             <p className="text-[#627382]">Total :</p>
                             <h5 className="text-2xl font-bold">${totalPrice}</h5>
                         </div>
-                        <button onClick={() => setBuyNow([])} className="btn bg-linear-to-r from-[#4f39f6] to-[#9514fa] font-semibold text-white px-4 py-7 rounded-full w-full">Proceed to Checkout</button>
+                        <button onClick={() => handlingProceed()} className="btn bg-linear-to-r from-[#4f39f6] to-[#9514fa] font-semibold text-white px-4 py-7 rounded-full w-full">Proceed to Checkout</button>
                     </div>
                 }
                 
