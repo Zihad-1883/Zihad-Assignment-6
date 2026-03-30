@@ -1,9 +1,18 @@
 import React from 'react';
 
 const Cart = ({buyNow , setBuyNow}) => {
-    console.log(buyNow);
+    // console.log(buyNow);
     const totalPrice = buyNow.reduce((sum , item) => sum + item.price , 0)
     // console.log(totalPrice)
+    // console.log(buyNow)
+    const removeCart = (item) => {
+        // console.log(item)
+        const filteredArray = buyNow.filter(e => e.id !== item.id);
+        // console.log(filteredArray)
+        setBuyNow(filteredArray);
+
+    }
+
     return (
         <div className='border border-gray-300 rounded-2xl px-10 py-5 my-10'>
             <div className="my-10">
@@ -27,10 +36,12 @@ const Cart = ({buyNow , setBuyNow}) => {
                                     </div>
                                 </div>
                                 <div>
-                                    <h4 className="text-[#FF3980] font-bold">Remove</h4>
+                                    <button onClick={() => removeCart(item)} className="text-[#FF3980] font-bold">Remove</button>
                                 </div>
                             </div>)
                         }
+                        
+                        
                         <div className="flex justify-between items-center my-6">
                             <p className="text-[#627382]">Total :</p>
                             <h5 className="text-2xl font-bold">${totalPrice}</h5>
@@ -38,6 +49,7 @@ const Cart = ({buyNow , setBuyNow}) => {
                         <button onClick={() => setBuyNow([])} className="btn bg-linear-to-r from-[#4f39f6] to-[#9514fa] font-semibold text-white px-4 py-7 rounded-full w-full">Proceed to Checkout</button>
                     </div>
                 }
+                
             </div>
         </div>
     );

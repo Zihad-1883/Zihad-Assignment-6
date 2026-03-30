@@ -8,6 +8,7 @@ import GetStarted from './Components/GetStarted'
 import Pricing from './Components/Pricing'
 import Workflow from './Components/Workflow'
 import Footer from './Components/Footer'
+import { ToastContainer } from 'react-toastify'
 
 const getProducts = async() => {
     const res = await fetch('/products.json');
@@ -19,7 +20,7 @@ const productsPromise = getProducts()
 function App() {
   
   const [buyNow , setBuyNow] = useState([])
-  console.log(buyNow.length);
+  // console.log(buyNow.length);
   
 
   return (
@@ -34,6 +35,7 @@ function App() {
        <Pricing></Pricing>
        <Workflow></Workflow>
        <Footer></Footer>
+       <ToastContainer></ToastContainer>
     </>
   )
 }
