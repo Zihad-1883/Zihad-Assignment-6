@@ -1,4 +1,4 @@
-import { Suspense } from 'react'
+import { Suspense, useState } from 'react'
 import './App.css'
 import Banner from './Components/Banner'
 import Navbar from './Components/Navbar'
@@ -12,19 +12,19 @@ const getProducts = async() => {
 
 const productsPromise = getProducts()
 
-
-
-
 function App() {
-
+  
+  const [buyNow , setBuyNow] = useState([])
+  console.log(buyNow.length);
+  
 
   return (
     <>
-       <Navbar></Navbar>
+       <Navbar buyNow={buyNow}></Navbar>
        <Banner></Banner>
        <Stats></Stats>
        <Suspense fallback={<p>Loading</p>}>
-          <Tools productsPromise={productsPromise}></Tools>
+          <Tools productsPromise={productsPromise} buyNow={buyNow} setBuyNow={setBuyNow}></Tools>
        </Suspense>
     </>
   )

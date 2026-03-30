@@ -2,7 +2,7 @@ import React from 'react';
 import Logo from '../assets/DigiTools.png'
 import ShoppingCart from '../assets/shopping-cart.png'
 
-const Navbar = () => {
+const Navbar = ({buyNow}) => {
     return (
         <div className="container mx-auto">
             <div className="navbar py-6">
@@ -37,9 +37,11 @@ const Navbar = () => {
                </div>
 
                 <div className="navbar-end">
-                    <div className="flex justify-center items-center gap-4">
+                    <div className="flex justify-center items-center gap-4 relative">
                         <img src={ShoppingCart} alt="ShoppingCart" />
-                        <p>Login</p>
+                        <span className="absolute top-0 left-4 text-green-900 font-bold">{buyNow.length === 0 ? "" : 
+                        buyNow.length}</span>
+                        <p className="mx-2">Login</p>
                         <button className="btn bg-linear-to-r from-[#4f39f6] to-[#9514fa] font-semibold text-white rounded-full">Get Started</button>
                     </div>
                 </div>
