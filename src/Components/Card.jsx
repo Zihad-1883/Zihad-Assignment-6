@@ -6,7 +6,7 @@ const Card = ({item , buyNow , setBuyNow}) => {
 
      const handleBuyNow = () => {
         setBuyNow([...buyNow , item]);
-        toast.success('Subscribed')
+        toast.success('Added To Cart')
     }
     const isClicked = buyNow.some(e => e.id === item.id)
     console.log(isClicked);
@@ -14,7 +14,7 @@ const Card = ({item , buyNow , setBuyNow}) => {
 
     return (
         <div>
-            <div className=" border-2 border-gray-300 rounded-lg p-6">
+            <div className="border-2 border-gray-300 rounded-lg p-6 transition-transform duration-200 hover:scale-105">
                         <div className="flex justify-between items-center">
                             <img className="my-4 border border-gray-300 p-4 rounded-full" src={item.image} alt="" />
                             <div className={`-mt-20 px-3 py-2 rounded-full ${item.tag === "Best Seller" && "bg-[#FEF3C6] text-[#BB4D00]"} ${item.tag === "Popular" && "bg-[#E1E7FF]"} ${item.tag === "New" && "bg-[#DBFCE7] text-[#0A883E]"}`}>
@@ -40,7 +40,7 @@ const Card = ({item , buyNow , setBuyNow}) => {
                         </div>
                         <button onClick={() => handleBuyNow()}
                                 disabled={isClicked}
-                                className={`btn ${isClicked ? "bg-linear-to-r from-green-500 to-green-900" : "bg-linear-to-r from-[#4f39f6] to-[#9514fa]"}  font-semibold text-white px-4 py-7 rounded-full w-full`}>{isClicked ? "Subscribed" : "Buy Now"}</button>
+                                className={`btn ${isClicked ? "bg-linear-to-r from-green-500 to-green-900" : "bg-linear-to-r from-[#4f39f6] to-[#9514fa]"}  font-semibold text-white px-4 py-7 rounded-full w-full`}>{isClicked ? "Added To Cart" : "Buy Now"}</button>
                     </div>
         </div>
     );

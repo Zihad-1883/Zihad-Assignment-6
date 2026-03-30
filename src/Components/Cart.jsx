@@ -1,5 +1,6 @@
 import React from 'react';
 import { toast } from 'react-toastify';
+import ShoppingCart from '../assets/shopping-cart.png'
 
 const Cart = ({buyNow , setBuyNow}) => {
 
@@ -21,8 +22,9 @@ const Cart = ({buyNow , setBuyNow}) => {
                 <h3 className="text-2xl font-bold mb-6">Your Cart</h3>
                 {
                     buyNow.length === 0 ? 
-                    <div className="flex justify-center items-center p-40">
-                        <h2 className="text-4xl">Your Cart Is Empty</h2>
+                    <div className="flex flex-col justify-center items-center gap-2 p-40">
+                        <img src={ShoppingCart} alt="" />
+                        <h2 className="text-2xl">Your Cart Is Empty</h2>
                     </div> : 
                     <div className="space-y-4">
                         {
@@ -38,7 +40,7 @@ const Cart = ({buyNow , setBuyNow}) => {
                                     </div>
                                 </div>
                                 <div>
-                                    <button onClick={() => removeCart(item)} className="text-[#FF3980] font-bold">Remove</button>
+                                    <button onClick={() => removeCart(item)} className="text-[#FF3980] font-bold transition-transform duration-200 hover:scale-115">Remove</button>
                                 </div>
                             </div>)
                         }
